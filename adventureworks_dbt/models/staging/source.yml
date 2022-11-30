@@ -1,0 +1,49 @@
+version: 2
+
+sources:
+  - name: adventure_works_etl
+    tables:
+      - name: adress
+        description: ""
+
+      - name: countryregion
+        description: ""
+
+      - name: creditcard
+        description: ""
+
+      - name: customer
+        description: ""
+
+      - name: department
+        description: ""
+
+      - name: employee
+        description: ""
+
+      - name: person
+        description: ""
+
+      - name: product
+        description: ""
+
+      - name: salesorderdetail
+        description: ""
+
+      - name: salesorderheader
+        description: ""
+
+      - name: salesorderheadersalesreason
+        description: ""
+
+      - name: salesperson
+        description: ""
+
+      - name: salesreason
+        description: ""
+
+      - name: salesterritory
+        description: ""
+
+      - name: stateprovince
+        description: ""
