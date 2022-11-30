@@ -23,3 +23,6 @@ sources:
 
       - name: raw_salesorderdetail
         description: ""
+
+      - name: raw_creditcard
+        description: ""
