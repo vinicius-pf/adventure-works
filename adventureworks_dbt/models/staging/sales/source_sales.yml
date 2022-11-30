@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: sales
+    tables:
+      - name: raw_salesperson
+        description: "Table with sales person information."
+      
+      - name: raw_customer
+        description: "Table with customer information."
+      
+      - name: raw_salesterritory
+        description: ""
+
+      - name: raw_salesorderheader
+        description: ""
+
+      - name: raw_salesreason
+        description: ""
+      
+      - name: raw_salesorderheadersalesreason
+        description: ""
+
+      - name: raw_salesorderdetail
+        description: ""

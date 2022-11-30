@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: production
+    tables:
+      - name: raw_product
+        description: "Table with sales person information."
