@@ -4,16 +4,9 @@ models:
   - name: dim_sales_reason
     description: "Dimension with information about the possible reasons for a sale."
     columns:
-      - name: sales_reason_id
-        description: 'Primary key of the table.'
-        tests: 
-          - unique
-          - not_null
-
       - name: sales_order_id
-        description: 'Foreign key of the table. It is used to join this table with the fact table.'
+        description: 'Foreign key. It is used to join this table with the fact table.'
         tests: 
-          - unique
           - not_null
 
       - name: reason_name
