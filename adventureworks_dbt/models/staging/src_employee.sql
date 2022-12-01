@@ -1,7 +1,6 @@
 select 
-    id
+    businessentityid
     , gender
-    , businessentityid
     , hiredate
     , jobtitle
     , currentflag

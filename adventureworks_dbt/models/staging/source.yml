@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: adventure_works_etl
     tables:
-      - name: adress
+      - name: address
         description: ""
 
       - name: countryregion
