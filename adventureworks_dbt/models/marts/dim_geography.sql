@@ -25,7 +25,8 @@ with countries as (
 
     , joined_table as (
         select
-            cities.city_name
+            cities.address_id 
+            , cities.city_name
             , cities.address_line
             , provinces.province_name
             , countries.country_name
