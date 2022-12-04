@@ -27,6 +27,10 @@ Its a PostgreSQL server.
 - Quais as 5 melhores cidades em valor total negociado por produto, tipo de cartão, motivo de venda, data de venda, cliente, status, cidade, estado e país?
 - Qual o número de pedidos, quantidade comprada, valor total negociado por mês e ano (dica: gráfico de série de tempo)?
 - Qual produto tem a maior quantidade comprada para o motivo “Promotion”?
+
+### Dimension-fact diagram
+
+
 ## E-L Pipeline
 
 This project will follow a Extract, Load, Transform(ELT) pipeline. It is the current modern data stack pipeline and it is better to work with Google Cloud solutions.
@@ -37,15 +41,30 @@ To extract the data from the company's database source, Airbyte was used locally
 
 add images
 
+Although a good option, trying to run Airbyte to extract and load the data in the Big Query instance, some problems were discovered. After the first sucessful sync, the succeding syncronizations always failed. Because of that, Stitch Data was used as an alternative and better option.
+
+add image Stitch
+
+With Stitch Data configured, it synced the data between source and destination and it was possible to create the project and tranform the data using DBT.
+
+
 ### Google BigQuery
 
-The google big query instance
+The google big query instance was created and the raw data was stored in a schema. In contrast to the source, all the tables were stored in the same schema. 
+
+add Google big query schema
+
+
 ## T
 To tranform the data and create the dimensions and fact tables, 
 
-### Dimensions and Facts
+With the needs and requests from the company, a dimension-fact diagram was created. This 
 
 ### DBT
+
+#### models
+
+
 
 ## BI
 
