@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: dim_salesperson
+    description: "Contains information about salespeople."
+    columns:
+      - name: businessentity_id
+        description: 'Primary key of the column.'
+        tests: 
+          - unique
+          - not_null
+      
+      - name: hire_date
+        description: 'Hire date for each sales person.'
+
+      - name: job_title
+        description: 'Job title'
+
+      - name: commission_pct
+        description: 'Comission for each sale.'
+
+      - name: sales_last_year
+        description: 'Amount of sales the previous year.'
+
+      - name: full_name
+        description: 'Full name of each employee'
+
