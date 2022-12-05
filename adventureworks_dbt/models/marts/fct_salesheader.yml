@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: fct_salesheader
+    description: "Contains information about each sale"
+    columns:
+      - name: sales_order_id
+        description: 'Primary key of the column.'
+        tests: 
+          - unique
+          - not_null
+
+      - name: sales_person_id
+        description: 'Foreign key. Relates to dim_sales_person'
+        tests: 
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: 'Foreign key. Relates to dim_customer'
+        tests: 
+          - unique
+          - not_null
+
+      - name: address_id
+        description: 'Foreign key. Relates to dim_geography'
+        tests: 
+          - unique
+          - not_null
+
+      - name: credit_card_id
+        description: 'Foreign key. Relates to dim_creditcard'
+        tests: 
+          - unique
+          - not_null
+
+      - name: tax_amount
+        description: 'Tax amount for each sale'
+
+      - name: order_date
+        description: 'Date of the sale'
+
+      - name: freight
+        description: 'Freight amount'
+
+      - name: due_date
+        description: 'Date that the order is due to the client'
+
+      - name: ship_date
+        description: 'Date that the order was shipped to the client'
+
+      - name: sale_status
+        description: 'Status of the transaction'
