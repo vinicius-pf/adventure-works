@@ -26,7 +26,7 @@ with person as (
 
     , joining_tables as (
         select
-            employee.businessentity_id
+            employee.businessentity_id as sales_person_id
             , employee.hire_date
             , employee.job_title
             , salesperson.commission_pct

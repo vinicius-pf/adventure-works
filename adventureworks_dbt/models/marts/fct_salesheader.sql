@@ -11,5 +11,10 @@ with sales_order_header as (
         , due_date
         , ship_date
         , sale_status
+        , is_online_order
     from {{ref('src_salesorderheader')}}
+    where credit_card_id is not null
 )
+
+select *
+from sales_order_header

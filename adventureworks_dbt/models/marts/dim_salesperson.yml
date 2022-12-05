@@ -4,7 +4,7 @@ models:
   - name: dim_salesperson
     description: "Contains information about salespeople."
     columns:
-      - name: businessentity_id
+      - name: sales_person_id
         description: 'Primary key of the column.'
         tests: 
           - unique

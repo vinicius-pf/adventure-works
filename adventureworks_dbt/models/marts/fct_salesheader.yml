@@ -11,27 +11,21 @@ models:
           - not_null
 
       - name: sales_person_id
-        description: 'Foreign key. Relates to dim_sales_person'
-        tests: 
-          - unique
-          - not_null
+        description: 'Foreign key. Relates to dim_sales_person. Can be null in case of online orders.'
 
       - name: customer_id
         description: 'Foreign key. Relates to dim_customer'
-        tests: 
-          - unique
+        tests:
           - not_null
 
       - name: address_id
         description: 'Foreign key. Relates to dim_geography'
-        tests: 
-          - unique
+        tests:
           - not_null
 
       - name: credit_card_id
         description: 'Foreign key. Relates to dim_creditcard'
-        tests: 
-          - unique
+        tests:
           - not_null
 
       - name: tax_amount
