@@ -75,4 +75,4 @@ With the needs and requests from the company, a dimension-fact diagram was creat
 ## Next steps
 
 ## Sources
-
+https://dataedo.com/download/AdventureWorks.pdf
