@@ -1,5 +1,5 @@
 select 
-    customerid as costumer_id
+    customerid as customer_id
     , personid as person_id
     , territoryid as territory_id
     , storeid as store_id
