@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: fct_salesheader
+  - name: fct_sales_header
     description: "Contains information about each sale"
     columns:
       - name: sales_order_id

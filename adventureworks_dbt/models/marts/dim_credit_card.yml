@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: dim_creditcard
+  - name: dim_credit_card
     description: "Contains information about the credit cards."
     columns:
       - name: credit_card_id

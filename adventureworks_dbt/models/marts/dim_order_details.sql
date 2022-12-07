@@ -25,6 +25,7 @@ with products as (
             , sales_order_details.orderqty
             , sales_order_details.unitprice
             , products.list_price
+            , products.product_name
         from sales_order_details
         left join products on products.product_id = sales_order_details.product_id
     )
