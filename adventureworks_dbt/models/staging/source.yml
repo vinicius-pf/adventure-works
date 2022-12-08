@@ -47,3 +47,6 @@ sources:
 
       - name: stateprovince
         description: ""
+
+      - name: store
+        description: ""

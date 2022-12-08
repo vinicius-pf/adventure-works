@@ -11,16 +11,29 @@ with person as (
         select
             person_id
             , customer_id
+            , store_id
         from {{ref('src_customer')}}
+    )
+
+    , store as (
+        select
+            store_id
+            , name
+        from {{ref('src_store')}}
     )
 
     , joining_tables as (
         select 
-            person.businessentity_id
-            , customer.customer_id
+            customer.customer_id
             , person.full_name
-        from person
-        left join customer on customer.person_id = person.businessentity_id
+            , store.name
+            , case
+                when person.full_name is null then store.name
+                when store.name is null then person.full_name
+            end as customer_name
+        from customer
+        left join person on person.businessentity_id = customer.person_id
+        left join store on store.store_id = customer.store_id
     )
 
 select * 
