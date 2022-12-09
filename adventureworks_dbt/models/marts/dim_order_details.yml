@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: dim_sales_reason
+  - name: dim_order_details
     description: "Dimension with information about the details of each sale, such as product and quantity information."
     columns:
       - name: sales_order_id
