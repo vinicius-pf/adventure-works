@@ -5,7 +5,7 @@ models:
     description: "Contains information about salespeople."
     columns:
       - name: sales_person_id
-        description: 'Primary key of the column.'
+        description: 'Primary key of the table.'
         tests: 
           - unique
           - not_null
@@ -17,7 +17,7 @@ models:
         description: 'Job title'
 
       - name: commission_pct
-        description: 'Comission for each sale.'
+        description: 'Comission percentage.'
 
       - name: sales_last_year
         description: 'Amount of sales the previous year.'

@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: dim_sales_reason
+    description: "Dimension with information about the details of each sale, such as product and quantity information."
+    columns:
+      - name: sales_order_id
+        description: 'Primary key of the table. It relates to fct_sales_header.'
+        tests: 
+          - not_null
+
+      - name: sales_detail_id
+        description: 'Primary key of the table.'
+        tests: 
+          - not_null
+          - unique
+
+      - name: product_name
+        description: 'Name of the product.'
+        tests: 
+          - not_null
+
+      - name: order_qty
+        description: 'Number of products ordered.'
+        tests: 
+          - not_null
+
+      - name: unit_price
+        description: 'Price for the product.'
+        tests: 
+          - not_null

@@ -5,7 +5,7 @@ models:
     description: "Geography dimension. Contains information about Addresses, cities, provinces and countries."
     columns:
       - name: address_id
-        description: 'Primary key of the column. Is unique for each address_line.'
+        description: 'Primary key of the table. It is unique for each address_line.'
         tests: 
           - unique
           - not_null

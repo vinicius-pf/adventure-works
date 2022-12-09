@@ -20,11 +20,9 @@ with products as (
         select
             sales_order_details.sales_order_id
             , sales_order_details.sales_detail_id
-            , sales_order_details.product_id
+            , products.product_name
             , sales_order_details.order_qty
             , sales_order_details.unit_price
-            , products.list_price
-            , products.product_name
         from sales_order_details
         left join products on products.product_id = sales_order_details.product_id
     )

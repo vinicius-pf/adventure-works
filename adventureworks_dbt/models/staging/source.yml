@@ -4,49 +4,43 @@ sources:
   - name: adventure_works_etl
     tables:
       - name: address
-        description: ""
+        description: "Table with adress information."
 
       - name: countryregion
-        description: ""
+        description: "It contains information about countries and regions"
 
       - name: creditcard
-        description: ""
+        description: "It contains credit card information."
 
       - name: customer
-        description: ""
-
-      - name: department
-        description: ""
+        description: "It contains information about customers. Customers can be stores or people."
 
       - name: employee
-        description: ""
+        description: "It contains information about the company's employees."
 
       - name: person
-        description: ""
+        description: "It contains information about the people. It has information about customers and employees."
 
       - name: product
-        description: ""
+        description: "It contains information about the products sold by the company."
 
       - name: salesorderdetail
-        description: ""
+        description: "It contains the details for each sale: waht products were sold, the quantity and the value"
 
       - name: salesorderheader
-        description: ""
+        description: "Fact table containing information about each sale."
 
       - name: salesorderheadersalesreason
-        description: ""
+        description: "Bridge table that relates the table salesreason with the fact table."
 
       - name: salesperson
-        description: ""
+        description: "It contains information about the salespeople of the company."
 
       - name: salesreason
-        description: ""
-
-      - name: salesterritory
-        description: ""
+        description: "Table that contains the possible reason for the sale."
 
       - name: stateprovince
-        description: ""
+        description: "It contains information about the state or province the cities belongs. It relates to the address table."
 
       - name: store
-        description: ""
+        description: "It contians information about the stores that bought something in the company."

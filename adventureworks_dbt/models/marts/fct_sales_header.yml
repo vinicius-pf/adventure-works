@@ -2,31 +2,29 @@ version: 2
 
 models:
   - name: fct_sales_header
-    description: "Contains information about each sale"
+    description: "Contains information about each sale."
     columns:
       - name: sales_order_id
-        description: 'Primary key of the column.'
+        description: 'Primary key of the table.'
         tests: 
           - unique
           - not_null
 
       - name: sales_person_id
-        description: 'Foreign key. Relates to dim_sales_person. Can be null in case of online orders.'
+        description: 'Foreign key related to dim_sales_person. It can be null in case of online orders.'
 
       - name: customer_id
-        description: 'Foreign key. Relates to dim_customer'
+        description: 'Foreign key related to dim_customer. Customers can be people or stores.'
         tests:
           - not_null
 
       - name: address_id
-        description: 'Foreign key. Relates to dim_geography'
+        description: 'Foreign key related to dim_geography. It informs the address of the sale, alongside the city, province/state, and country.'
         tests:
           - not_null
 
       - name: credit_card_id
-        description: 'Foreign key. Relates to dim_creditcard'
-        tests:
-          - not_null
+        description: 'Foreign key related to dim_creditcard. There are 1131 sales without credit card information.'
 
       - name: tax_amount
         description: 'Tax amount for each sale'
@@ -44,4 +42,4 @@ models:
         description: 'Date that the order was shipped to the client'
 
       - name: sale_status
-        description: 'Status of the transaction'
+        description: 'Status of the transaction. Although it can have 6 diferent values, at the momento there is only "Shipped" sales.'

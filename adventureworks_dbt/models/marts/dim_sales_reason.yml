@@ -5,13 +5,13 @@ models:
     description: "Dimension with information about the possible reasons for a sale."
     columns:
       - name: reason_sk
-        description: 'Primary key of the column.'
+        description: 'Primary key of the table.'
         tests: 
           - not_null
           - unique
 
       - name: sales_reason_id
-        description: 'Foreign key. It is used to join this table with the fact table.'
+        description: 'Foreign key related to src_salesreason.'
         tests: 
           - not_null
 
