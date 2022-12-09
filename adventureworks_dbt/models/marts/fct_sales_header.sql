@@ -13,7 +13,6 @@ with sales_order_header as (
         , sale_status
         , is_online_order
     from {{ref('src_salesorderheader')}}
-    where credit_card_id is not null
 )
 
 select *

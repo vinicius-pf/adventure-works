@@ -1,9 +1,6 @@
 with person_table as (
     select 
         businessentityid as businessentity_id
-        , firstname
-        , middlename
-        , lastname
         , case
             when middlename is null then concat(firstname, ' ', lastname) 
             else concat(firstname, ' ', middlename, ' ', lastname)

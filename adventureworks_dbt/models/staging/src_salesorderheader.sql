@@ -14,12 +14,12 @@ select
         when onlineorderflag is False then 'No'
       end as is_online_order
     , case 
-        when "status" like '1' then 'In process'
-        when "status" like '2' then 'Approved'
-        when "status" like '3' then 'Backordered'
-        when "status" like '4' then 'Rejected'
-        when "status" like '5' then 'Shipped'
-        when "status" like '6' then 'Cancelled'
+        when status = 1 then 'In process'
+        when status = 2 then 'Approved'
+        when status = 3 then 'Backordered'
+        when status = 4 then 'Rejected'
+        when status = 5 then 'Shipped'
+        when status = 6 then 'Cancelled'
       end as sale_status
     , _sdc_received_at as ind_extraction_date
 from {{source('adventure_works_etl', 'salesorderheader')}}

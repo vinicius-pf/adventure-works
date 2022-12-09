@@ -18,7 +18,7 @@ with person as (
     , store as (
         select
             store_id
-            , name
+            , store_name
         from {{ref('src_store')}}
     )
 
@@ -26,9 +26,9 @@ with person as (
         select 
             customer.customer_id
             , person.full_name
-            , store.name
+            , store.store_name
             , case
-                when person.full_name is null then store.name
+                when person.full_name is null then store.store_name
                 when store.name is null then person.full_name
             end as customer_name
         from customer
