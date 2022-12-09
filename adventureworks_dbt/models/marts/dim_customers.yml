@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Customer dimension. Contains information about the company's customers."
+    columns:
+      - name: customer_id
+        description: 'Unique id for each client.'
+        tests:
+          - unique
+          - not_null
+      
+      - name: full_name
+        description: 'Name of each person considered a customer.'
+
+      - name: name
+        description: 'Name of each store considered a customer.'
+
+      - name: customer_name
+        description: 'Unification of the name columns.'
+        tests:
+          - not_null

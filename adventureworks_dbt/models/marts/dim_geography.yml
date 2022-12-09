@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dim_geography
+    description: "Geography dimension. Contains information about Addresses, cities, provinces and countries."
+    columns:
+      - name: address_id
+        description: 'Primary key of the table. It is unique for each address_line.'
+        tests: 
+          - unique
+          - not_null
+
+      - name: city_name
+        description: 'Name of the city.'
+      
+      - name: address_line
+        description: 'Registrered address.'
+      
+      - name: province_name
+        description: 'State or province the city belongs to.'
+
+      - name: country_name
+        description: 'Country of each city/province.'
