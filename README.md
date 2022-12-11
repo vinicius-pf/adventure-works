@@ -122,4 +122,4 @@ With this project done, it is possible to discuss the nexts steps in this partne
 
 ## Sources
 
-https://dataedo.com/download/AdventureWorks.pdf
+[PDF](https://dataedo.com/download/AdventureWorks.pdf)
