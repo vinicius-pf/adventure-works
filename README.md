@@ -51,7 +51,7 @@ With these questions in mind, it is possible to start the ELT pipeline. Iniciall
 
 Using the questions that the company needs answers and studying the database information shared by the IT analyst, a dimensional diagram was created, showing what tables would be imported and how the dimensions of the data warehouse would be constructed. In this diagram there is also the definition of what table is the fact table for this project.
 
-add image
+![image](https://user-images.githubusercontent.com/6025360/206908382-63b85ec2-8ec2-4bdc-88a2-aa3ad1e1e546.png)
 
 With the dimensions and fact tables defined, it is possible to import only the need tables from the source. This will be achieved with Stitch Data.
 
@@ -61,7 +61,7 @@ In the first attempt to extract the data from the company's database source, air
 
 For this project, Stitch was used during a free trial. However, the tool was effective and allowed some adjustments to be made.
 
-add image Stitch
+![image](https://user-images.githubusercontent.com/6025360/206908399-6e2ef27d-d6b9-4d97-9414-2c388d43a857.png)
 
 With Stitch Data configured, it synced the data between source and destination and it was possible to create the project and tranform the data using DBT.
 
@@ -69,7 +69,7 @@ With Stitch Data configured, it synced the data between source and destination a
 
 For this project, it was created a Google BigQuery instance to be the Data Warehouse. Although the tables were in different schemas in the source, they were all stored in the same schema in the data warehouse.
 
-add Google big query schema
+![image](https://user-images.githubusercontent.com/6025360/206908408-dcc1ee54-ff51-4b9d-953c-2cf83e49b0a9.png)
 
 With the data warehouse configured, it is possible to transform the data using DBT. The raw data will be read from the data warehouse and the transformed data will be stored in its own schema.
 
@@ -79,11 +79,11 @@ The tranform process was made with DBT. This data transformation tool allows the
 
 Firstly, the source tables were imported in the staging area. This area is used to select the most important columns for the insights. In this stage there is also some data tranformations and columns renaming.
 
-add image staging
+![image](https://user-images.githubusercontent.com/6025360/206908422-dbd71006-0aa8-4156-9efd-e578cda9ea8b.png)
 
 After the staging step, the tables were joined following the diagram into dimensions. For this project, the intermediate layer was not used, so the tables were joined in the marts stage.
 
-add image marts.
+![image](https://user-images.githubusercontent.com/6025360/206908430-b98f2f65-77c4-464d-a33d-d4ffa38525b0.png)
 
 Each dimension and the fact table has a .yml file with the same name. In this file there are some information about each table and columns, in addition to tests created for some columns.
 
@@ -104,22 +104,21 @@ Average ticket | Average of unitprice | = AVERAGE(dim_order_details[unit_price])
 
 At the start of the page, there are the filters requested by the company.
 
-add filter image
+![image](https://user-images.githubusercontent.com/6025360/206908448-3ba5e101-6cc4-404d-bd84-d9ac958239a0.png)
 
 After the filters, the big numbers are shown. These inform the total sales, quantity sold and total value of the sales. Shortly after, there is a line graph for each number that allows a analysis over time for them
 
-add big numbers
+![image](https://user-images.githubusercontent.com/6025360/206908461-d1ca5878-16b1-47ea-aa81-7c4fa942150f.png)
 
-add line graphs
+![image](https://user-images.githubusercontent.com/6025360/206908466-df91a411-86b9-4963-b3d2-fbc8314ad156.png)
 
 After that, the top cities and customers are shown, followed by the best products by average ticket and the most products sold with the reason being 'Promotion'.
 
-add bar graphs.
+![image](https://user-images.githubusercontent.com/6025360/206908484-4c763c7a-de54-4f53-96eb-2449d786da93.png)
+
+![image](https://user-images.githubusercontent.com/6025360/206908487-4788af40-d3c4-4ad9-acf9-a35d8daf185f.png)
+
 
 ## Next steps
 
-With this project done, it is possible to discuss the nexts steps in this partnership with Adventure Works. With the information currently on the database, it is possible to create dashboards containing analysis on the employees sales and state. With other data sources, it is also feasible to create analysis on the marketing department, which could find the best places to advertise the company.
-
-## Sources
-
-https://dataedo.com/download/AdventureWorks.pdf
+With this project done, it is possible to discuss the nexts steps in this partnership with Adventure Works. With the information currently on the database, it is possible to create dashboards containing analysis on the employees sales, group sales and products by region and more. With other data sources, it is also feasible to create analysis on the marketing department, which could find the best places to advertise the company.
